@@ -1,18 +1,44 @@
-
-import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, Code, Cloud, Palette, Server, Database, Award, Briefcase, GraduationCap, ChevronDown, ExternalLink, Menu, X, Monitor, Smartphone } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  Code,
+  Cloud,
+  Palette,
+  Server,
+  Database,
+  Award,
+  Briefcase,
+  GraduationCap,
+  ChevronDown,
+  ExternalLink,
+  Menu,
+  X,
+  Monitor,
+  Smartphone,
+} from "lucide-react";
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
-      const current = sections.find(section => {
+
+      const sections = [
+        "home",
+        "about",
+        "experience",
+        "projects",
+        "skills",
+        "contact",
+      ];
+      const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -23,14 +49,14 @@ export default function App() {
       if (current) setActiveSection(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setMobileMenuOpen(false);
     }
   };
@@ -50,7 +76,7 @@ export default function App() {
       "PostgreSQL",
       "MongoDB",
     ],
-    "Frontend": [
+    Frontend: [
       "React",
       "Angular",
       "Svelte",
@@ -76,7 +102,7 @@ export default function App() {
       "CI/CD Pipelines",
       "CloudFormation",
       "Datadog",
-      "Zapier"
+      "Zapier",
     ],
     "Design & UX": [
       "Figma",
@@ -87,10 +113,10 @@ export default function App() {
       "Requirements Gathering",
     ],
   };
-  
+
   const skillIcons = {
     "Backend & APIs": Server,
-    "Frontend": Monitor,
+    Frontend: Monitor,
     "Mobile Development": Smartphone,
     "Cloud & DevOps": Cloud,
     "Design & UX": Palette,
@@ -98,30 +124,30 @@ export default function App() {
 
   const experience = [
     {
-      company: 'Safety IO',
-      role: 'Software Developer Intern',
-      period: 'Jan 2025 - Sep 2025',
-      location: 'Cape Town, South Africa',
+      company: "Safety IO",
+      role: "Software Developer Intern",
+      period: "Jan 2025 - Sep 2025",
+      location: "Cape Town, South Africa",
       highlights: [
-        'Migrated Bamboo runner to Bitbucket Pipelines, reducing deployment errors by 25%',
-        'Built full-stack applications using Angular, TypeScript, and PostgreSQL',
-        'Analyzed Datadog logs to identify performance bottlenecks and improve system uptime',
-        'Developed RESTful APIs with AWS Cognito authentication and Lambda deployments',
-        'Co-developed Confluence analytics tool with activity heatmaps and search functionality'
-      ]
+        "Migrated Bamboo runner to Bitbucket Pipelines, reducing deployment errors by 25%",
+        "Built full-stack applications using Angular, TypeScript, and PostgreSQL",
+        "Analyzed Datadog logs to identify performance bottlenecks and improve system uptime",
+        "Developed RESTful APIs with AWS Cognito authentication and Lambda deployments",
+        "Co-developed Confluence analytics tool with activity heatmaps and search functionality",
+      ],
     },
     {
-      company: 'Outlier AI',
-      role: 'Coding Expert - AI Trainer',
-      period: 'Aug 2024 - Jan 2025',
-      location: 'Remote',
+      company: "Outlier AI",
+      role: "Coding Expert - AI Trainer",
+      period: "Aug 2024 - Jan 2025",
+      location: "Remote",
       highlights: [
-        'Completed 100+ coding tasks in one month, generating R25,000+ in earnings',
-        'Reviewed and optimized AI-generated code across JavaScript, Python, Java, and TypeScript',
-        'Applied RLHF workflows and structured annotation for AI training',
-        'Designed coding challenges to strengthen AI reasoning and problem-solving'
-      ]
-    }
+        "Completed 100+ coding tasks in one month, generating R25,000+ in earnings",
+        "Reviewed and optimized AI-generated code across JavaScript, Python, Java, and TypeScript",
+        "Applied RLHF workflows and structured annotation for AI training",
+        "Designed coding challenges to strengthen AI reasoning and problem-solving",
+      ],
+    },
   ];
 
   const projects = [
@@ -169,6 +195,46 @@ export default function App() {
       link: null,
     },
     {
+      title: "NoteWatch - Confluence Activity Analytics & Search",
+      tech: ["Webscraping", "Atlassian API", "Angular", "Node.js"],
+      description:
+        "Co-developed a tool to scrape Confluence pages and index intern notes to generate activity analytics and a heatmap-style view of contributions. Implemented search functionality to quickly find notes and surface collaboration patterns.",
+      impact: "Improved visibility into intern activity and knowledge sharing",
+      link: null,
+    },
+    {
+      title: "Minesweeper Game Development",
+      tech: ["Python", "Pygame", "Numpy", "OOP", "MVC"],
+      description:
+        "Developed a Minesweeper game from scratch using OOP, MVC, polymorphism, and composition for scalable design. Integrated game logic with graph theory, adjacency maps, and Numpy for optimized grid computations. Built an interactive Pygame interface showcasing Python and real-time rendering skills.",
+      impact:
+        "Demonstrated mastery of OOP, MVC, Liskov and Open/Closed principles, and performance optimization with Numpy and adjacency maps.",
+    },
+    {
+      title: "Toy Robot Maze Solver → Multiplayer Game System",
+      tech: ["Python", "Graph Theory", "Java", "OOP", "Distributed Systems"],
+      description:
+        "Built a Python prototype simulating a toy robot in procedurally generated mazes, solving them using BFS/DFS and graph theory. Applied OOP, TDD, and adjustable maze parameters. Later scaled to a multi-client Java server with JSON over WebSockets, concurrency, layered architecture, ORM, design patterns, Dockerized services, and CI/CD pipelines.",
+      impact:
+        "Transitioned a simple prototype into a robust distributed system, showcasing strong algorithm, system design, and software engineering skills.",
+    },
+    {
+      title: "ClubConnect Website",
+      tech: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "PHP",
+        "REST API",
+        "PostgreSQL",
+      ],
+      description:
+        "Co-developed a community website for WeThinkCode_ clubs to showcase campus activities. Implemented testimonial submission and secure storage with PHP and PostgreSQL. Applied full-stack practices including backend API design, frontend integration, and responsive UI with HTML, CSS, JavaScript, and Bootstrap. Submitted to New Type Works Hacks Hackathon.",
+      impact:
+        "Enhanced club engagement while demonstrating full-stack development and scalable data management skills.",
+    },
+    {
       title: "Yo Africa - Health Information Platform",
       tech: ["React", "Firebase", "Botpress"],
       description:
@@ -179,9 +245,17 @@ export default function App() {
   ];
 
   const awards = [
-    { title: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services', year: '2025' },
-    { title: 'Mukuru SheHacks Hackathon Winner', org: 'Mukuru', year: '2024' },
-    { title: 'Merit Bursary', org: 'University of the Free State', year: '2020' }
+    {
+      title: "AWS Certified Cloud Practitioner",
+      org: "Amazon Web Services",
+      year: "2025",
+    },
+    { title: "Mukuru SheHacks Hackathon Winner", org: "Mukuru", year: "2024" },
+    {
+      title: "Merit Bursary",
+      org: "University of the Free State",
+      year: "2020",
+    },
   ];
 
   return (
