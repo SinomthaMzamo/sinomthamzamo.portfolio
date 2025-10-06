@@ -25,6 +25,9 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // toggle expand and collapse of projects section
+  const [showAll, setShowAll] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -243,6 +246,8 @@ export default function App() {
       link: null,
     },
   ];
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   const awards = [
     {
@@ -511,41 +516,57 @@ export default function App() {
             Featured Projects
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800 transition-all hover:shadow-xl hover:shadow-emerald-500/10 flex flex-col"
-              >
-                <h3 className="text-xl font-bold mb-3 text-emerald-400">
-                  {project.title}
-                </h3>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="text-xs bg-emerald-900/30 text-emerald-300 px-2 py-1 rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 flex-grow">
-                  {project.description}
-                </p>
-                <p className="text-sm text-pink-400 italic">{project.impact}</p>
-                {project.link && (
-                  <div className="flex justify-end">
-                    <a
-                      className="bg-pink-400/40 mt-4 text-white px-4 py-2 rounded"
-                      href={project.link}
-                    >
-                      Visit Project
-                    </a>
+          <div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {visibleProjects.map((project, idx) => (
+                <div
+                  key={idx}
+                  className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800 transition-all hover:shadow-xl hover:shadow-emerald-500/10 flex flex-col"
+                >
+                  <h3 className="text-xl font-bold mb-3 text-emerald-400">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-xs bg-emerald-900/30 text-emerald-300 px-2 py-1 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
-                )}
+                  <p className="text-gray-300 mb-4 flex-grow">
+                    {project.description}
+                  </p>
+                  <p className="text-sm text-pink-400 italic">
+                    {project.impact}
+                  </p>
+                  {project.link && (
+                    <div className="flex justify-end">
+                      <a
+                        className="bg-pink-400/40 mt-4 text-white px-4 py-2 rounded"
+                        href={project.link}
+                      >
+                        Visit Project
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Toggle Button */}
+            {projects.length > 3 && (
+              <div className="flex justify-center mt-6">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="bg-emerald-500/80 mt-4 hover:bg-emerald-500 text-white px-6 py-2 rounded-full shadow-md transition"
+                >
+                  {showAll ? "See Less Projects" : "See More Projects"}
+                </button>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
