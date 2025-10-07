@@ -362,7 +362,7 @@ export default function App() {
           <div className="mb-6">
             <div className="w-64 h-64 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full overflow-hidden flex items-center justify-center">
               <img
-                src="assets/logo-avatar.png"
+                src="assets/fancy-avatar.png"
                 alt="avatar"
                 className="w-full h-full object-cover"
               />
@@ -372,7 +372,7 @@ export default function App() {
             Sinomtha Mzamo
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-4">
-            Software Engineer
+            Full-Stack Developer & Cloud Engineer
           </p>
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             Building scalable, user-centric solutions from ideation to
