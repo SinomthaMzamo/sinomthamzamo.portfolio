@@ -27,7 +27,6 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   // toggle expand and collapse of projects section
   const [showAll, setShowAll] = useState(false);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -260,7 +259,6 @@ export default function App() {
     });
   };
 
-
   const awards = [
     {
       title: "AWS Certified Cloud Practitioner",
@@ -287,7 +285,7 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-pink-400 bg-clip-text text-transparent">
+            <div className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               SM
             </div>
 
@@ -357,12 +355,12 @@ export default function App() {
       >
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-emerald-500/30 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-pink-500/30 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse delay-1000"></div>
+          <div className="absolute w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse delay-1000"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="mb-6">
-            <div className="w-64 h-64 mx-auto bg-gradient-to-r from-emerald-400 to-pink-400 rounded-full overflow-hidden flex items-center justify-center">
+            <div className="w-64 h-64 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full overflow-hidden flex items-center justify-center">
               <img
                 src="assets/logo-avatar.png"
                 alt="avatar"
@@ -370,7 +368,7 @@ export default function App() {
               />
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent animate-gradient">
             Sinomtha Mzamo
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-4">
@@ -459,7 +457,7 @@ export default function App() {
                 </p>
               </div>
               <div className="bg-slate-800/50 p-6 rounded-lg hover:bg-slate-800 transition-colors">
-                <Cloud className="text-pink-400 mb-3" size={32} />
+                <Cloud className="text-cyan-400 mb-3" size={32} />
                 <h3 className="font-semibold mb-2">Cloud & DevOps</h3>
                 <p className="text-sm text-gray-400">
                   AWS, Docker, CI/CD, Monitoring
@@ -473,7 +471,7 @@ export default function App() {
                 </p>
               </div>
               <div className="bg-slate-800/50 p-6 rounded-lg hover:bg-slate-800 transition-colors">
-                <Palette className="text-pink-400 mb-3" size={32} />
+                <Palette className="text-cyan-400 mb-3" size={32} />
                 <h3 className="font-semibold mb-2">UX Design</h3>
                 <p className="text-sm text-gray-400">
                   Figma, Prototyping, User Research
@@ -551,13 +549,13 @@ export default function App() {
                   <p className="text-gray-300 mb-4 flex-grow">
                     {project.description}
                   </p>
-                  <p className="text-sm text-pink-400 italic">
+                  <p className="text-sm text-cyan-400 italic">
                     {project.impact}
                   </p>
                   {project.link && (
                     <div className="flex justify-end">
                       <a
-                        className="bg-pink-400/40 mt-4 text-white px-4 py-2 rounded"
+                        className="bg-cyan-400/60 mt-4 text-white px-4 py-2 rounded"
                         href={project.link}
                       >
                         Visit Project
@@ -620,27 +618,27 @@ export default function App() {
             <h3 className="text-2xl font-bold mb-6 text-center">
               Currently Exploring
             </h3>
-            <div className="bg-gradient-to-r from-emerald-900/30 to-pink-900/30 rounded-lg p-8 border border-emerald-500/20">
+            <div className="bg-gradient-to-r from-emerald-900/30 to-cyan-900/30 rounded-lg p-8 border border-emerald-500/20">
               <div className="flex flex-wrap justify-center gap-4">
-                <span className="bg-pink-900/40 text-pink-300 px-4 py-2 rounded-full text-sm font-medium border border-pink-500/30">
+                <span className="bg-cyan-900/40 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium border border-cyan-500/30">
                   GraphQL
                 </span>
                 <span className="bg-emerald-900/40 text-emerald-300 px-4 py-2 rounded-full text-sm font-medium border border-emerald-500/30">
                   Bloc/Cubit
                 </span>
-                <span className="bg-pink-900/40 text-pink-300 px-4 py-2 rounded-full text-sm font-medium border border-pink-500/30">
+                <span className="bg-cyan-900/40 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium border border-cyan-500/30">
                   Workflow Automation (n8n)
                 </span>
                 <span className="bg-emerald-900/40 text-emerald-300 px-4 py-2 rounded-full text-sm font-medium border border-emerald-500/30">
                   AI-Assisted Development Patterns
                 </span>
-                <span className="bg-pink-900/40 text-pink-300 px-4 py-2 rounded-full text-sm font-medium border border-pink-500/30">
+                <span className="bg-cyan-900/40 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium border border-cyan-500/30">
                   Advanced Cloud Architecture
                 </span>
                 <span className="bg-emerald-900/40 text-emerald-300 px-4 py-2 rounded-full text-sm font-medium border border-emerald-500/30">
                   Model Context Protocol (MCP)
                 </span>
-                <span className="bg-pink-900/40 text-pink-300 px-4 py-2 rounded-full text-sm font-medium border border-pink-500/30">
+                <span className="bg-cyan-900/40 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium border border-cyan-500/30">
                   SCSS
                 </span>
               </div>
