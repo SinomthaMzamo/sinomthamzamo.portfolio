@@ -249,6 +249,18 @@ export default function App() {
 
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
+  const handleToggleProjects = () => {
+    setShowAll((prev) => {
+      if (prev) {
+        // if collapsing
+        const element = document.getElementById("projects");
+        element?.scrollIntoView({ behavior: "smooth" });
+      }
+      return !prev;
+    });
+  };
+
+
   const awards = [
     {
       title: "AWS Certified Cloud Practitioner",
@@ -560,7 +572,7 @@ export default function App() {
             {projects.length > 3 && (
               <div className="flex justify-center mt-6">
                 <button
-                  onClick={() => setShowAll(!showAll)}
+                  onClick={handleToggleProjects}
                   className="bg-emerald-500/80 mt-4 hover:bg-emerald-500 text-white px-6 py-2 rounded-full shadow-md transition"
                 >
                   {showAll ? "See Less Projects" : "See More Projects"}
