@@ -371,7 +371,7 @@ export default function App() {
               />
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-sky-700 to-emerald-500 bg-clip-text text-transparent animate-gradient">
             Sinomtha Mzamo
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-4">
