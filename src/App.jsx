@@ -677,8 +677,8 @@ export default function App() {
           </h2>
           <p className="text-xl text-gray-300 mb-12">
             I'm always interested in new opportunities and collaborations.
-            Whether you have a project in mind or just want to connect, feel
-            free to reach out.
+            Whether you need a short-term project delivered quickly or a
+            long-term team member, I can help bring your ideas to life.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6">
