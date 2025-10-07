@@ -14,4 +14,4 @@ This is the official portfolio of Sinomtha Mzamo, showcasing projects in web and
 
 - Secure, responsive, cross-browser compatible interfaces
 
-#### Visit the live portfolio to explore projects and get in touch: [Portfolio Link](https://sinomthamzamo.github.io/sinomthamzamo.portfolio/)# sinomthamzamo.portfolio
+#### Visit the live portfolio to explore projects and get in touch:  [Portfolio Link](https://sinomthamzamo.github.io/sinomthamzamo.portfolio/sinomthamzamo.portfolio)
