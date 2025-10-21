@@ -395,12 +395,12 @@ export default function App() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="mb-20">
+          <div className="mb-10 mt-8">
             <div className="relative w-64 h-64 mx-auto">
               <Variation1 />
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-sky-700 to-emerald-500 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent animate-gradient">
             Sinomtha Mzamo
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-4">

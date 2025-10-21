@@ -80,7 +80,7 @@ export default function Variation1(){
           {selected.label}
         </span>
       </div>
-      <div className="w-64 h-64 rounded-full flex items-center justify-center relative overflow-hidden border-4 border-teal-400/20 shadow-2xl">
+      <div className="w-64 h-64 rounded-full flex items-center justify-center relative overflow-hidden shadow-2xl">
         <div
           className={`absolute inset-0 transition-all duration-500 ${
             isAnimating
@@ -108,7 +108,7 @@ export default function Variation1(){
         <div className="flex gap-2">
           <button
             onClick={shuffle}
-            className="group w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 rounded-full shadow-2xl flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 border-4 border-white"
+            className="group w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 rounded-full shadow-2xl flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 border-2 border-white"
           >
             <Dices
               size={26}
