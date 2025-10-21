@@ -20,6 +20,7 @@ import {
   Monitor,
   Smartphone,
 } from "lucide-react";
+import Variation1 from "./Game";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -27,6 +28,10 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   // toggle expand and collapse of projects section
   const [showAll, setShowAll] = useState(false);
+
+  // avatar image controls state management
+  const [selected, setSelected] = useState("plain");
+  const [openDropdown, setOpenDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,6 +67,34 @@ export default function App() {
       setMobileMenuOpen(false);
     }
   };
+
+  const avatars = [
+    "nerdy",
+    "irl",
+    "plain",
+    "space",
+    "lake",
+    "arcade",
+    "library",
+    "bakery",
+    "spooky",
+    "farm",
+    "moana",
+    "spiderman",
+    "beach",
+    "dr-strange",
+  ];
+
+  // pick a random avatar
+  const pickRandom = () => {
+    let random;
+    do {
+      random = avatars[Math.floor(Math.random() * avatars.length)];
+    } while (random === selected);
+
+    setSelected(random);
+  };
+
 
   const skills = {
     "Backend & APIs": [
@@ -138,7 +171,7 @@ export default function App() {
         "Co-developed a Confluence analytics tool with activity heatmaps and advanced search functionality, adding data-driven insights for stakeholders",
         "Selected and assessed trade-offs between design patterns such as Factory and Builder to improve system design, demonstrating solid software architecture judgment and maintainability practices",
         "Enhanced team communication pipelines by integrating Bitbucket and Microsoft Teams webhooks automated with Ansible to continuously notify developers of activity on critical branches, strengthening collaboration and supporting a proactive DevOps culture.",
-        "Refactored and cleaned up bloated stylesheets by migrating to modular SCSS, reducing reliance on `!important` and `::ng-deep`, which improved encapsulation, maintainability, and front-end performance",
+        "Refactored and streamlined stylesheets by migrating to modular SCSS and removing legacy code smells, leading to cleaner structure, easier maintenance, and improved front-end performance.",
       ],
     },
     {
@@ -362,16 +395,12 @@ export default function App() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="mb-6">
-            <div className="w-64 h-64 mx-auto bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full overflow-hidden flex items-center justify-center">
-              <img
-                src="assets/fancy-avatar.png"
-                alt="avatar"
-                className="w-full h-full object-cover"
-              />
+          <div className="mb-10 mt-8">
+            <div className="relative w-64 h-64 mx-auto">
+              <Variation1 />
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-sky-700 to-emerald-500 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-cyan-400 to-emerald-500 bg-clip-text text-transparent animate-gradient">
             Sinomtha Mzamo
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 mb-4">
@@ -643,6 +672,9 @@ export default function App() {
                 </span>
                 <span className="bg-cyan-900/40 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium border border-cyan-500/30">
                   SCSS
+                </span>
+                <span className="bg-emerald-900/40 text-emerald-300 px-4 py-2 rounded-full text-sm font-medium border border-emerald-500/30">
+                  Micro-Frontends
                 </span>
               </div>
             </div>
