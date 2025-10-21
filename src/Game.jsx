@@ -18,8 +18,10 @@ const avatarOptions = [
   { id: "lake", label: "lake", imgSrc: "assets/avatar-lake.png" },
   { id: "arcade", label: "arcade", imgSrc: "assets/avatar-arcade.png" },
   { id: "library", label: "library", imgSrc: "assets/avatar-library.png" },
+  { id: "beach", label: "beach", imgSrc: "assets/avatar-beach.png" },
   { id: "bakery", label: "bakery", imgSrc: "assets/avatar-bakery.png" },
   { id: "moana", label: "moana", imgSrc: "assets/avatar-moana.png" },
+  { id: "tailor", label: "tailor", imgSrc: "assets/avatar-tailor.png" },
   {
     id: "strange",
     label: "strange",
@@ -47,8 +49,13 @@ export default function Variation1(){
     setDirection("right");
     setTimeout(() => {
       const current = avatarOptions.findIndex((a) => a.id === selected.id);
-      const next = (current + 1) % avatarOptions.length;
-      setSelected(avatarOptions[next]);
+      let randomIndex = Math.floor(Math.random() * avatarOptions.length);
+      console.log("current", current, "random index", randomIndex);
+      while (randomIndex == current){
+        randomIndex = Math.floor(Math.random() * avatarOptions.length);
+      }
+      // const next = (current + 1) % avatarOptions.length;
+      setSelected(avatarOptions[randomIndex]);
       setIsAnimating(false);
     }, 300);
   };
@@ -67,7 +74,13 @@ export default function Variation1(){
 
   return (
     <div className="relative">
-      <div className="w-72 h-72 rounded-full flex items-center justify-center relative overflow-hidden border-4 border-teal-400/20 shadow-2xl">
+      <div className="absolute z-40 -top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+        <Sparkles size={16} className="text-emerald-300" />
+        <span className="text-sm text-white font-semibold tracking-wide">
+          {selected.label}
+        </span>
+      </div>
+      <div className="w-64 h-64 rounded-full flex items-center justify-center relative overflow-hidden border-4 border-teal-400/20 shadow-2xl">
         <div
           className={`absolute inset-0 transition-all duration-500 ${
             isAnimating
@@ -89,20 +102,13 @@ export default function Variation1(){
               : "translate-x-0 opacity-100"
           }`}
         ></div>
-
-        <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-          <Sparkles size={16} className="text-emerald-300" />
-          <span className="text-sm text-white font-semibold tracking-wide">
-            {selected.label}
-          </span>
-        </div>
       </div>
 
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-        <div className="flex gap-3">
+        <div className="flex gap-2">
           <button
             onClick={shuffle}
-            className="group w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 rounded-full shadow-2xl flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 border-4 border-white"
+            className="group w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 rounded-full shadow-2xl flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95 border-4 border-white"
           >
             <Dices
               size={26}
@@ -113,7 +119,7 @@ export default function Variation1(){
           <div className="relative">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="w-16 h-16 bg-white hover:bg-gray-50 rounded-full shadow-2xl flex items-center justify-center text-emerald-600 transition-all hover:scale-110 active:scale-95 border-4 border-white"
+              className="w-14 h-14 bg-white hover:bg-gray-50 rounded-full shadow-2xl flex items-center justify-center text-emerald-600 transition-all hover:scale-110 active:scale-95 border-4 border-white"
             >
               <ChevronDown
                 size={26}
@@ -124,13 +130,13 @@ export default function Variation1(){
             </button>
 
             {isOpen && (
-              <div className="absolute bottom-full mb-3 -right-28 bg-white rounded-2xl shadow-2xl p-2 w-44 z-20 border-2 border-emerald-100 animate-in fade-in slide-in-from-bottom-2 duration-200">
-                <div className="grid grid-cols-2 gap-2">
+              <div className="absolute bottom-full mb-3 -right-28 bg-white rounded-2xl shadow-2xl p-2 w-80 z-20 border-2 border-emerald-100 animate-in fade-in slide-in-from-bottom-2 duration-200">
+                <div className="grid grid-cols-4 gap-2">
                   {avatarOptions.map((opt) => (
                     <button
                       key={opt.id}
                       onClick={() => selectAvatar(opt)}
-                      className={`w-full text-center px-1 py-2.5 rounded-xl hover:bg-emerald-50 transition-all text-sm font-medium ${
+                      className={`w-full whitespace-nowrap text-center px-1 py-2.5 rounded-xl hover:bg-emerald-50 transition-all text-sm font-medium ${
                         selected.id === opt.id
                           ? "bg-emerald-500 text-white shadow-md scale-105"
                           : "text-gray-700"
