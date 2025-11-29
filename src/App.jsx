@@ -14,7 +14,7 @@ import {
   Briefcase,
   GraduationCap,
   ChevronDown,
-  ExternalLink,
+  BrainCircuit,
   Menu,
   X,
   Monitor,
@@ -147,6 +147,16 @@ export default function App() {
       "Usability Testing",
       "Requirements Gathering",
     ],
+    "Artificial Intelligence": [
+      "LLM Integration",
+      "Prompt Engineering",
+      "RLHF",
+      "Text-to-Speech (TTS)",
+      "Speech-to-Text (STT)",
+      "Reinforcement Learning",
+      "Generative AI Workflows",
+      "AI Assited Development",
+    ],
   };
 
   const skillIcons = {
@@ -155,6 +165,7 @@ export default function App() {
     "Mobile Development": Smartphone,
     "Cloud & DevOps": Cloud,
     "Design & UX": Palette,
+    "Artificial Intelligence": BrainCircuit,
   };
 
   const experience = [
