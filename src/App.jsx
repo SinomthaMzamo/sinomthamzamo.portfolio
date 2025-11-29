@@ -216,6 +216,15 @@ export default function App() {
       link: "https://www.figma.com/proto/MXS3aWkjb31vA3BAsSKoLV/RoutePool-Wireframes?node-id=465-2325&p=f&t=rN6rzGxTPB5kuBn3-0&scaling=scale-down&content-scaling=fixed&page-id=376:3805&starting-point-node-id=462:1701&show-proto-sidebar=1",
     },
     {
+      title: "Vuka Code - AI Interview Mentor",
+      tech: ["Python", "React", "LLM", "TTS", "STT"],
+      description:
+        "AI-powered mock interview coach where users upload their CV and job description. Simulates real interviews with voice, provides actionable critique, generates tailored STAR stories, and delivers performance reports for continuous improvement.",
+      impact:
+        "Helps job seekers practice confidently, gain insights into weak points, and prepare efficiently for interviews",
+      link: "https://sinomthamzamo.github.io/MelsoftHackathonPitchDeck/#",
+    },
+    {
       title: "Personal Portfolio & CRM Dashboard",
       tech: ["Angular", "AWS Lambda", "DynamoDB", "Cognito", "API Gateway"],
       description:

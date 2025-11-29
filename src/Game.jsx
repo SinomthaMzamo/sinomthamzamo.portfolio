@@ -11,8 +11,8 @@ import {
 
 
 const avatarOptions = [
-  { id: "nerdy", label: "nerdy", imgSrc: "assets/avatar-nerdy.png" },
   { id: "irl", label: "irl", imgSrc: "assets/avatar-irl.png" },
+  { id: "nerdy", label: "nerdy", imgSrc: "assets/avatar-nerdy.png" },
   { id: "plain", label: "plain", imgSrc: "assets/avatar-plain.png" },
   { id: "space", label: "space", imgSrc: "assets/avatar-space.png" },
   { id: "lake", label: "lake", imgSrc: "assets/avatar-lake.png" },
