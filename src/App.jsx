@@ -209,24 +209,6 @@ export default function App() {
       link: "https://sinomthamzamo.github.io/dha-babs/",
     },
     {
-      title: "Bhala Edolweni - Debtor Management",
-      tech: ["Python", "React", "Kotlin", "Stripe", "REST API"],
-      description:
-        "Full-stack platform for small businesses to track debtors. Features multi-user management, encrypted communications, Stripe payments integration, and real-time analytics dashboard.",
-      impact:
-        "Transitioning backend to Kotlin Multiplatform for cross-platform scalability",
-      link: "https://github.com/SinomthaMzamo/bhala-edolweni",
-    },
-    {
-      title: "RoutePool - Carpooling Platform",
-      tech: ["Flutter", "Kotlin", "Spring Boot", "PostgreSQL", "AWS"],
-      description:
-        "Mobile app connecting drivers and passengers on shared routes to reduce traffic congestion in Cape Town. Features real-time updates, Google Maps integration, digital payments, and safety features.",
-      impact:
-        "Designed to leverage HOV lane incentives and address spatial inequality",
-      link: "https://www.figma.com/proto/MXS3aWkjb31vA3BAsSKoLV/RoutePool-Wireframes?node-id=465-2325&p=f&t=rN6rzGxTPB5kuBn3-0&scaling=scale-down&content-scaling=fixed&page-id=376:3805&starting-point-node-id=462:1701&show-proto-sidebar=1",
-    },
-    {
       title: "Vuka Code - AI Interview Mentor",
       tech: ["Python", "React", "LLM", "TTS", "STT"],
       description:
@@ -243,6 +225,24 @@ export default function App() {
       impact:
         "Production-ready cloud architecture with full auth implementation",
       link: null,
+    },
+    {
+      title: "Bhala Edolweni - Debtor Management",
+      tech: ["Python", "React", "Kotlin", "Stripe", "REST API"],
+      description:
+        "Full-stack platform for small businesses to track debtors. Features multi-user management, encrypted communications, Stripe payments integration, and real-time analytics dashboard.",
+      impact:
+        "Transitioning backend to Kotlin Multiplatform for cross-platform scalability",
+      link: "https://github.com/SinomthaMzamo/bhala-edolweni",
+    },
+    {
+      title: "RoutePool - Carpooling Platform",
+      tech: ["Flutter", "Kotlin", "Spring Boot", "PostgreSQL", "AWS"],
+      description:
+        "Mobile app connecting drivers and passengers on shared routes to reduce traffic congestion in Cape Town. Features real-time updates, Google Maps integration, digital payments, and safety features.",
+      impact:
+        "Designed to leverage HOV lane incentives and address spatial inequality",
+      link: "https://www.figma.com/proto/MXS3aWkjb31vA3BAsSKoLV/RoutePool-Wireframes?node-id=465-2325&p=f&t=rN6rzGxTPB5kuBn3-0&scaling=scale-down&content-scaling=fixed&page-id=376:3805&starting-point-node-id=462:1701&show-proto-sidebar=1",
     },
     {
       title: "Burn After Reading",
@@ -269,14 +269,6 @@ export default function App() {
         "Demonstrated mastery of OOP, MVC, Liskov and Open/Closed principles, and performance optimization with Numpy and adjacency maps.",
     },
     {
-      title: "Toy Robot Maze Solver → Multiplayer Game System",
-      tech: ["Python", "Graph Theory", "Java", "OOP", "Distributed Systems"],
-      description:
-        "Built a Python prototype simulating a toy robot in procedurally generated mazes, solving them using BFS/DFS and graph theory. Applied OOP, TDD, and adjustable maze parameters. Later scaled to a multi-client Java server with JSON over WebSockets, concurrency, layered architecture, ORM, design patterns, Dockerized services, and CI/CD pipelines.",
-      impact:
-        "Transitioned a simple prototype into a robust distributed system, showcasing strong algorithm, system design, and software engineering skills.",
-    },
-    {
       title: "ClubConnect Website",
       tech: [
         "HTML",
@@ -291,6 +283,14 @@ export default function App() {
         "Co-developed a community website for WeThinkCode_ clubs to showcase campus activities. Implemented testimonial submission and secure storage with PHP and PostgreSQL. Applied full-stack practices including backend API design, frontend integration, and responsive UI with HTML, CSS, JavaScript, and Bootstrap. Submitted to New Type Works Hacks Hackathon.",
       impact:
         "Enhanced club engagement while demonstrating full-stack development and scalable data management skills.",
+    },
+    {
+      title: "Toy Robot Maze Solver → Multiplayer Game System",
+      tech: ["Python", "Graph Theory", "Java", "OOP", "Distributed Systems"],
+      description:
+        "Built a Python prototype simulating a toy robot in procedurally generated mazes, solving them using BFS/DFS and graph theory. Applied OOP, TDD, and adjustable maze parameters. Later scaled to a multi-client Java server with JSON over WebSockets, concurrency, layered architecture, ORM, design patterns, Dockerized services, and CI/CD pipelines.",
+      impact:
+        "Transitioned a simple prototype into a robust distributed system, showcasing strong algorithm, system design, and software engineering skills.",
     },
     {
       title: "Yo Africa - Health Information Platform",
